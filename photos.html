@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos | Gamma Studio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .gallery a {
+            display: block;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Photos</h1>
+    <div class="gallery">
+        <a href="photos/001.jpg" target="_blank"><img src="photos/001.jpg" alt="Studio Image 1"></a>
+        <a href="photos/002.jpg" target="_blank"><img src="photos/002.jpg" alt="Studio Image 2"></a>
+        <a href="photos/003.jpg" target="_blank"><img src="photos/003.jpg" alt="Studio Image 3"></a>
+        <a href="photos/004.jpg" target="_blank"><img src="photos/004.jpg" alt="Studio Image 4"></a>
+        <a href="photos/005.jpg" target="_blank"><img src="photos/005.jpg" alt="Studio Image 5"></a>
+        <a href="photos/006.jpg" target="_blank"><img src="photos/006.jpg" alt="Studio Image 6"></a>
+    </div>
+</body>
+</html>
