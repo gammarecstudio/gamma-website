@@ -1,1 +1,61 @@
-<a href="photos.html">Photos</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Gamma Recording Studio">
+    <link rel="icon" type="image/x-icon" href="photos/favicon.png">
+    <title>Welcome | Gamma Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            background: url('photos/bg-index.jpg') no-repeat center center/cover;
+            position: relative;
+            width: 100%;
+            height: 150vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            background-attachment: fixed;
+            justify-content: center;
+        }
+        .hero-logo {
+            max-height: 70%;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html"><h1>Gamma Recording Studio</h1></a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="nav-menu">
+                <a href="photos.html" aria-label="PHOTOS">PHOTOS</a>
+                <a href="equipment.html" aria-label="EQUIPMENT">EQUIPMENT</a>
+                <a href="contact.html" aria-label="CONTACT">CONTACT</a>
+                <a href="pricelist.html" aria-label="PRICE LIST">PRICE LIST</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="photos/logo-gamma-rec.png" alt="Gamma Studio Logo" class="hero-logo"><br><br>
+        <a href="photos.html">
+            <button class="button-46" role="button">ENTER</button>
+        </a>
+    </section>
+
+<footer>
+    <div class="social-links">
+        <a href="https://www.facebook.com/GammaRecordingStudio/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/gammarecordingstudio/" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>

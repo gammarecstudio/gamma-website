@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the photo gallery of Gamma Recording Studio featuring state-of-the-art equipment and studio setup.">
+    <link rel="icon" type="image/x-icon" href="photos/favicon.png">
+    <title>Photo Gallery | Gamma Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color:#f1efea;
+        }
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            background: #f5f5f5;
+            color: black;
+            text-align: center;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            letter-spacing: .18em;
+            line-height: 1em;
+        }
+        header {
+            background: #222;
+            padding-left: 90px;
+            padding-right: 90px;
+            padding-top: 34px;
+            padding-bottom: 34px;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            justify-content: space-between;
+            flex-direction: column;
+            transition: transform 0.3s ease-in-out;
+            font-family: 'futura', Arial, sans-serif;
+            letter-spacing:0px;
+            color:#f1efea;
+        }
+        footer {
+            background: #222;
+            padding: 45px;
+            text-align: center;
+            margin-top: 0px;
+        }
+        header h1 {
+            font-size: 31px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            margin: 0;
+            padding-left: 20px; /* Add padding if needed */
+        }
+        header.hide {
+            transform: translateY(-100%);
+        }
+        nav {
+            display: flex;
+            /* justify-content: center; */
+            gap: 20px;
+            padding-right: 20px;
+            margin-top: 10px;
+            transition: opacity 0.3s ease-in-out;
+        }
+        nav a {
+            color: #ffe48a;
+            text-decoration: none;
+            font-family: 'Merriweather', serif;
+            letter-spacing: .1em;
+            font-size: 13px;
+            font-weight: 400;
+            font-style: normal;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            text-decoration: none;
+            color: rgb(233 226 230 / 98%);
+        }
+        nav a.active {
+            font-weight: bold;
+            color: rgb(233 226 230 / 98%);
+            text-decoration: none;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            padding-right: 20px;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            background: url('photos/hero-equip.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-attachment: fixed;
+        }
+        .hero h1 {
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 50px;
+            font-weight: 1000;
+            color: rgb(233 226 230 / 98%);
+        }
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+            }
+            nav {
+                visibility: hidden;
+                opacity: 0;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #333;
+                padding: 10px 0;
+            }
+            nav.show {
+                visibility: visible;
+                opacity: 1;
+            }
+            nav a {
+                display: block;
+                padding: 10px;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+        .section {
+            max-width: 1000px;
+            margin: auto;
+            /* padding: 20px; */
+        }
+        .section h2 {
+            color: #435b58;
+            font-weight: 200;
+            text-transform: uppercase;
+            margin: 40px 0; /* Equal spacing above and below */
+        }
+        .container {
+            display: flex;        ;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .social-links {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-links a {
+            color: #ffe48a;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .social-links a:hover {
+            text-decoration: none;
+            color: rgb(233 226 230 / 98%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><h1>Gamma Recording Studio</h1></a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="nav-menu">
+                <a href="photos.html" aria-label="PHOTOS">PHOTOS</a>
+                <a href="equipment.html" aria-label="EQUIPMENT">EQUIPMENT</a>
+                <a href="contact.html" aria-label="CONTACT">CONTACT</a>
+                <a href="pricelist.html" aria-label="PRICE LIST">PRICE LIST</a>
+            </nav>
+        </div>
+    </header>
+    <div class="hero"><h1>PHOTOS</h1></div>
+    
+    <div class="section">
+        <h2>Studio</h2>
+    </div>
+
+    <div class="section">
+        <h2>Gear</h2>
+    </div>
+
+    <div class="section">
+        <h2>Microphones</h2>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+            let menuLinks = document.querySelectorAll("#nav-menu a");
+        
+            menuLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>        
+
+</body>
+</html>

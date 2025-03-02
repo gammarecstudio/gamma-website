@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Equipment">
+    <link rel="icon" type="image/x-icon" href="photos/favicon.png">
+    <title>Equipment | Gamma Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;800&&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            background: url('photos/hero-equip.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-attachment: fixed;
+        }
+        img {
+            width: 100%;
+            max-width: 1220px;
+            height: 224px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><h1>Gamma Recording Studio</h1></a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="nav-menu">
+                <a href="photos.html" aria-label="PHOTOS">PHOTOS</a>
+                <a href="equipment.html" aria-label="EQUIPMENT">EQUIPMENT</a>
+                <a href="contact.html" aria-label="CONTACT">CONTACT</a>
+                <a href="pricelist.html" aria-label="PRICE LIST">PRICE LIST</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero"><h1>EQUIPMENT</h1></div>
+    
+    <div class="image-container">
+        <img src="photos/studio-equip.jpg" alt="Recording">
+        <h2>Recording</h2>
+        <ul>
+            <li>Quad Eight console 1971 with 16 MM61 channels × 16 output balanced channels</li>
+            <li>MCI - JH-110-8 1”</li>
+            <li>Apogee Symphony 64 Thunderbridge I/O 32-32</li>
+            <li>AVIOM A320 Personal Mixers (4)</li>
+            <li>Latest Pro Tools/Ableton Live</li>
+            <li>Tannoy SRM 10B</li>
+            <li>Yamaha NS-10M Studio</li>
+        </ul>
+    </div>
+    
+    <div class="image-container">
+        <img src="photos/009.jpg" alt="Outboard Gear & FX">
+        <h2>Outboard Gear & FX</h2>
+        <ul>
+            <li>Teletronix LA-2A (first reissue)</li>
+            <li>General Electric BA5A (2)</li>
+            <li>Urei 1176 Rev F vintage</li>
+            <li>Urei LA3A vintage (2)</li>
+            <li>Tube-Tech PE 1B (80s) (2)</li>
+            <li>DBX 160 (2)</li>
+            <li>DBX 165 (2)</li>
+            <li>Master Room XL121 Chamber reverb</li>
+            <li>EMI Chandler TG1</li>
+            <li>Lexicon Prime Time 93</li>
+            <li>Eventide H3000</li>
+        </ul>
+    </div>
+    
+    <div class="image-container">
+        <img src="photos/drums-equip.jpg" alt="Microphones">
+        <h2>Microphones</h2>
+        <ul>
+            <li>Neumann U47 1952 vintage with original VF14</li>
+            <li>Neumann U67 1962</li>
+            <li>Neumann U87 1971</li>
+            <li>Neumann KM56 (50s) (2)</li>
+            <li>STC 4038 vintage</li>
+            <li>AKG 414 EB CK-12 (2)</li>
+            <li>Electro-Voice RE15 (2)</li>
+            <li>Electro-Voice RE16</li>
+            <li>Reslo Ribon microphone 30/50 (2)</li>
+            <li>AKG D19</li>
+            <li>AKG D222</li>
+            <li>AKG D20</li>
+            <li>AKG D25</li>
+            <li>AKG D12</li>
+            <li>Sennheiser 441 vintage</li>
+            <li>Beyer Dynamic M201 TG</li>
+            <li>Electro-Voice 635A (2)</li>
+        </ul>
+    </div>
+    
+    <div class="image-container">
+        <img src="photos/keyboards-equip.jpg" alt="Keyboards">
+        <h2>Keyboards</h2>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    
+    <div class="image-container">
+        <img src="photos/plugins-equip.jpg" alt="Plugins">
+        <h2>Plugins</h2>
+        <ul>
+            <li>Plugin Alliance bundle</li>
+            <li>Soundtoys bundle</li>
+            <li>Waves Plugins bundle</li>
+            <li>FabFilter Pro Q3</li>
+            <li>FabFilter Pro-L 2</li>
+            <li>Ozone RX7</li>
+            <li>Altiverb 6</li>
+            <li>Softubes</li>
+            <li>Melodyne</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/GammaRecordingStudio/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/gammarecordingstudio/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+            let menuLinks = document.querySelectorAll("#nav-menu a");
+        
+            menuLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Price List">
+    <link rel="icon" type="image/x-icon" href="photos/favicon.png">
+    <title>Price List | Gamma Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;800&&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            background: url('photos/021.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><h1>Gamma Recording Studio</h1></a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="nav-menu">
+                <a href="photos.html" aria-label="PHOTOS">PHOTOS</a>
+                <a href="equipment.html" aria-label="EQUIPMENT">EQUIPMENT</a>
+                <a href="contact.html" aria-label="CONTACT">CONTACT</a>
+                <a href="pricelist.html" aria-label="PRICE LIST">PRICE LIST</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero"><h1>PRICE LIST</h1></div>
+    
+    <div class="section-container">
+        <table>
+            <tr>
+                <td>Studio A</td>
+                <td>$350/day<br>$50/hour</td>
+            </tr>
+            <tr>
+                <td>Studio B</td>
+                <td>$300/day<br>$40/hour</td>
+            </tr>
+            <tr>
+                <td>A + B</td>
+                <td>$450/day</td>
+            </tr>
+            <tr>
+                <td>Engineer on demand</td>
+                <td>$45/hour</td>
+            </tr>
+            <tr>
+                <td>Mix (in-the-box)</td>
+                <td>$50/hour</td>
+            </tr>
+            <tr>
+                <td>Mix (Analog)</td>
+                <td>$90/hour</td>
+            </tr>
+            <tr>
+                <td>Edit</td>
+                <td>$50/hour</td>
+            </tr>
+        </table>
+        <p class="note">Prices in CAD$</p>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/GammaRecordingStudio/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/gammarecordingstudio/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+            let menuLinks = document.querySelectorAll("#nav-menu a");
+        
+            menuLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

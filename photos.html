@@ -3,51 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos | Gamma Studio</title>
+    <meta name="description" content="Photo Gallery">
+    <link rel="icon" type="image/x-icon" href="photos/favicon.png">
+    <title>Photo Gallery | Gamma Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #111;
-            color: white;
-            text-align: center;
-        }
-        h1 {
-            margin: 20px 0;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .gallery a {
-            display: block;
-        }
-        .gallery img {
+        .hero {
+            background: url('photos/bg_001.jpg') no-repeat center center/cover;
+            position: relative;
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-attachment: fixed;
         }
     </style>
 </head>
 <body>
-    <h1>Photos</h1>
-    <div class="gallery">
-        <a href="photos/001.jpg" target="_blank"><img src="photos/001.jpg" alt="Studio Image 1"></a>
-        <a href="photos/002.jpg" target="_blank"><img src="photos/002.jpg" alt="Studio Image 2"></a>
-        <a href="photos/003.jpg" target="_blank"><img src="photos/003.jpg" alt="Studio Image 3"></a>
-        <a href="photos/004.jpg" target="_blank"><img src="photos/004.jpg" alt="Studio Image 4"></a>
-        <a href="photos/005.jpg" target="_blank"><img src="photos/005.jpg" alt="Studio Image 5"></a>
-        <a href="photos/006.jpg" target="_blank"><img src="photos/006.jpg" alt="Studio Image 6"></a>
+    <header>
+        <div class="container">
+            <a href="index.html"><h1>Gamma Recording Studio</h1></a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="nav-menu">
+                <a href="photos.html" aria-label="PHOTOS">PHOTOS</a>
+                <a href="equipment.html" aria-label="EQUIPMENT">EQUIPMENT</a>
+                <a href="contact.html" aria-label="CONTACT">CONTACT</a>
+                <a href="pricelist.html" aria-label="PRICE LIST">PRICE LIST</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero"><h1>PHOTOS</h1></div>
+    
+    <div class="section">
+        <h2>Studio</h2>
+        <div class="gallery">
+            <a href="photos/001.jpg" target="_blank"><img src="photos/001.jpg" alt="Studio Image 1"></a>
+            <a href="photos/002.jpg" target="_blank"><img src="photos/002.jpg" alt="Studio Image 2"></a>
+            <a href="photos/003.jpg" target="_blank"><img src="photos/003.jpg" alt="Studio Image 3"></a>
+            <a href="photos/004.jpg" target="_blank"><img src="photos/004.jpg" alt="Studio Image 4"></a>
+            <a href="photos/005.jpg" target="_blank"><img src="photos/005.jpg" alt="Studio Image 5"></a>
+            <a href="photos/006.jpg" target="_blank"><img src="photos/006.jpg" alt="Studio Image 6"></a>
+            <a href="photos/007.jpg" target="_blank"><img src="photos/007.jpg" alt="Studio Image 7"></a>
+            <a href="photos/008.jpg" target="_blank"><img src="photos/008.jpg" alt="Studio Image 8"></a>
+        </div>
     </div>
+
+    <div class="section">
+        <h2>Gear</h2>
+        <div class="gallery gear-gallery">
+            <a href="photos/009.jpg" target="_blank"><img src="photos/009.jpg" alt="Gear Image 9"></a>
+            <a href="photos/010.jpg" target="_blank"><img src="photos/010.jpg" alt="Gear Image 10"></a>
+            <a href="photos/011.jpg" target="_blank"><img src="photos/011.jpg" alt="Gear Image 11"></a>
+            <a href="photos/012.jpg" target="_blank"><img src="photos/012.jpg" alt="Gear Image 12"></a>
+            <a href="photos/013.jpg" target="_blank"><img src="photos/013.jpg" alt="Gear Image 13"></a>
+            <a href="photos/014.jpg" target="_blank"><img src="photos/014.jpg" alt="Gear Image 14"></a>
+            <a href="photos/015.jpg" target="_blank"><img src="photos/015.jpg" alt="Gear Image 15"></a>
+            <a href="photos/016.jpg" target="_blank"><img src="photos/016.jpg" alt="Gear Image 16"></a>
+            <a href="photos/017.jpg" target="_blank"><img src="photos/017.jpg" alt="Gear Image 17"></a>
+            <a href="photos/018.jpg" target="_blank"><img src="photos/018.jpg" alt="Gear Image 18"></a>
+            <a href="photos/019.jpg" target="_blank"><img src="photos/019.jpg" alt="Gear Image 19"></a>
+            <a href="photos/020.jpg" target="_blank"><img src="photos/020.jpg" alt="Gear Image 20"></a>
+            <a href="photos/021.jpg" target="_blank"><img src="photos/021.jpg" alt="Gear Image 21"></a>
+            <a href="photos/022.jpg" target="_blank"><img src="photos/022.jpg" alt="Gear Image 22"></a>
+            <a href="photos/023.jpg" target="_blank"><img src="photos/023.jpg" alt="Gear Image 23"></a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Microphones</h2>
+        <div class="gallery mic-gallery">
+            <a href="photos/024.jpg" target="_blank"><img src="photos/024.jpg" alt="Microphone Image 24"></a>
+            <a href="photos/025.jpg" target="_blank"><img src="photos/025.jpg" alt="Microphone Image 25"></a>
+            <a href="photos/026.jpg" target="_blank"><img src="photos/026.jpg" alt="Microphone Image 26"></a>
+            <a href="photos/027.jpg" target="_blank"><img src="photos/027.jpg" alt="Microphone Image 27"></a>
+            <a href="photos/028.jpg" target="_blank"><img src="photos/028.jpg" alt="Microphone Image 28"></a>
+            <a href="photos/029.jpg" target="_blank"><img src="photos/029.jpg" alt="Microphone Image 29"></a>
+            <a href="photos/030.jpg" target="_blank"><img src="photos/030.jpg" alt="Microphone Image 30"></a>
+            <a href="photos/031.jpg" target="_blank"><img src="photos/031.jpg" alt="Microphone Image 31"></a>
+            <a href="photos/032.jpg" target="_blank"><img src="photos/032.jpg" alt="Microphone Image 32"></a>
+            <a href="photos/033.jpg" target="_blank"><img src="photos/033.jpg" alt="Microphone Image 33"></a>
+            <a href="photos/034.jpg" target="_blank"><img src="photos/034.jpg" alt="Microphone Image 34"></a>
+            <a href="photos/035.jpg" target="_blank"><img src="photos/035.jpg" alt="Microphone Image 35"></a>
+            <a href="photos/036.jpg" target="_blank"><img src="photos/036.jpg" alt="Microphone Image 36"></a>
+            <a href="photos/037.jpg" target="_blank"><img src="photos/037.jpg" alt="Microphone Image 37"></a>
+            <a href="photos/038.jpg" target="_blank"><img src="photos/038.jpg" alt="Microphone Image 38"></a>
+            <a href="photos/039.jpg" target="_blank"><img src="photos/039.jpg" alt="Microphone Image 39"></a>
+            <a href="photos/041.jpg" target="_blank"><img src="photos/041.jpg" alt="Microphone Image 41"></a>
+            <a href="photos/042.jpg" target="_blank"><img src="photos/042.jpg" alt="Microphone Image 42"></a>
+            <a href="photos/043.jpg" target="_blank"><img src="photos/043.jpg" alt="Microphone Image 43"></a>
+            <a href="photos/044.jpg" target="_blank"><img src="photos/044.jpg" alt="Microphone Image 44"></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/GammaRecordingStudio/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/gammarecordingstudio/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+            let menuLinks = document.querySelectorAll("#nav-menu a");
+        
+            menuLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>        
+
 </body>
 </html>

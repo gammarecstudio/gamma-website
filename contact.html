@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact">
+    <link rel="icon" type="image/x-icon" href="photos/favicon.png">
+    <title>Contact | Gamma Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            background: url('photos/hero-contact.jpg') no-repeat center center/cover;
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><h1>Gamma Recording Studio</h1></a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="nav-menu">
+                <a href="photos.html" aria-label="PHOTOS">PHOTOS</a>
+                <a href="equipment.html" aria-label="EQUIPMENT">EQUIPMENT</a>
+                <a href="contact.html" aria-label="CONTACT">CONTACT</a>
+                <a href="pricelist.html" aria-label="PRICE LIST">PRICE LIST</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero"><h1>CONTACT</h1></div>
+    
+    <div class="section-container">
+        <h2>Info</h2>
+        <ul>
+            <li>Gamma Recording Studio is located in Rosemont, Montréal. Please write us to discuss your project to accommodate your budget! </li>
+        </ul>
+    </div>
+    
+    <div class="section-container">
+        <h2>Contact</h2>
+        <ul>
+            <li>gammarecstudio@gmail.com</li>
+            <li>Owner/Producer/Engineer:<br>Samuel Gemme</li>
+        </ul>
+    </div>
+    
+    <div class="section-container">
+        <h2>Address</h2>
+        <ul>
+            <li>1980 rue Dandurand<br>Montréal, QC, Canada<br>H2G 1Y9</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/GammaRecordingStudio/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/gammarecordingstudio/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+            let menuLinks = document.querySelectorAll("#nav-menu a");
+        
+            menuLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
