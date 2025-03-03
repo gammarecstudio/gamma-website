@@ -12,19 +12,33 @@
         .hero {
             background: url('photos/bg-index.jpg') no-repeat center center/cover;
             position: relative;
-            width: 100%;
+            box-sizing: border-box;
             height: 150vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             color: white;
-            background-attachment: fixed;
+            background-attachment: fixed; /* or remove this line */
+            background-size: cover;
+            width: 100vw; /* Ensures it spans the full screen */
             justify-content: center;
         }
         .hero-logo {
             max-height: 70%;
             margin-bottom: 20px;
             margin-top: 40px;
+        }
+        @media screen and (max-width: 768px) {
+            .hero {
+                height: 100vh;
+                background-attachment: fixed;
+                justify-content:unset ;
+            }
+            .hero-logo {
+                max-height: 50%;
+                margin-top: 14vh;
+                margin-bottom: 6vh;
+            }
         }
     </style>
 </head>
@@ -44,16 +58,18 @@
     </header>
 
     <section class="hero">
-        <img src="photos/logo-gamma-rec.png" alt="Gamma Studio Logo" class="hero-logo"><br><br>
+        <img src="photos/logo-gamma-rec.png" alt="Gamma Studio Logo" class="hero-logo">
         <a href="photos.html">
             <button class="button-46" role="button">ENTER</button>
         </a>
     </section>
 
 <footer>
-    <div class="social-links">
-        <a href="https://www.facebook.com/GammaRecordingStudio/" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/gammarecordingstudio/" target="_blank">Instagram</a>
+    <div class="container">
+        <div class="social-links">
+            <a href="https://www.facebook.com/GammaRecordingStudio/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/gammarecordingstudio/" target="_blank">Instagram</a>
+        </div>
     </div>
 </footer>
 
