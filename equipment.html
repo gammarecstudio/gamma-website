@@ -13,7 +13,7 @@
             position: relative;
             width: 100%;
             height: 30vh;
-            background: url('photos/hero-equip.jpg') no-repeat center center/cover;
+            background: url('webp_photos/hero-equip.webp') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -28,6 +28,13 @@
             object-position: center;
             display: block;
             margin: auto;
+        }
+        @media screen and (max-width: 768px) {
+            .hero {
+                background: url('webp_photos/hero-equip.webp') no-repeat center center/cover;
+                background-size: 100% 200px;
+                height: 20vh;
+            }
         }
     </style>
 </head>
@@ -48,7 +55,7 @@
     <div class="hero"><h1>EQUIPMENT</h1></div>
     
     <div class="image-container">
-        <img src="photos/studio-equip.jpg" alt="Recording">
+        <img src="webp_photos/studio-equip.webp" alt="Recording">
         <h2>Recording</h2>
         <ul>
             <li>Quad Eight console 1971 with 16 MM61 channels × 16 output balanced channels</li>
@@ -62,7 +69,7 @@
     </div>
     
     <div class="image-container">
-        <img src="photos/009.jpg" alt="Outboard Gear & FX">
+        <img src="webp_photos/009.webp" alt="Outboard Gear & FX">
         <h2>Outboard Gear & FX</h2>
         <ul>
             <li>Teletronix LA-2A (first reissue)</li>
@@ -80,7 +87,7 @@
     </div>
     
     <div class="image-container">
-        <img src="photos/drums-equip.jpg" alt="Microphones">
+        <img src="webp_photos/drums-equip.webp" alt="Microphones">
         <h2>Microphones</h2>
         <ul>
             <li>Neumann U47 1952 vintage with original VF14</li>
@@ -104,7 +111,7 @@
     </div>
     
     <div class="image-container">
-        <img src="photos/keyboards-equip.jpg" alt="Keyboards">
+        <img src="webp_photos/keyboards-equip.webp" alt="Keyboards">
         <h2>Keyboards</h2>
         <ul>
             <li></li>
@@ -112,7 +119,7 @@
     </div>
     
     <div class="image-container">
-        <img src="photos/plugins-equip.jpg" alt="Plugins">
+        <img src="webp_photos/plugins-equip.webp" alt="Plugins">
         <h2>Plugins</h2>
         <ul>
             <li>Plugin Alliance bundle</li>

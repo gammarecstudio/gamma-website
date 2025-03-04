@@ -13,12 +13,19 @@
             position: relative;
             width: 100%;
             height: 30vh;
-            background: url('photos/021.jpg') no-repeat center center/cover;
+            background: url('webp_photos/021.webp') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             background-attachment: fixed;
+        }
+        @media screen and (max-width: 768px) {
+            .hero {
+                background: url('webp_photos/021.webp') no-repeat center center/cover;
+                background-size: 100% 200px;
+                height: 20vh;
+            }
         }
     </style>
 </head>
